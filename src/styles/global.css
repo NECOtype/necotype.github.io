@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import '@fontsource-variable/geist-mono';
+
+@theme inline {
+	--font-mono: var(--font-family);
+}
+
+
+* {}
+
+:root {
+	--font-family: "Geist Mono Variable", monospace;
+}
+
+@layer base {
+	h2 {
+		@apply text-2xl font-bold;
+	}
+
+	a {
+		@apply underline text-slate-700;
+	}
+}
