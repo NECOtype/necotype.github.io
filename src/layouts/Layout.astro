@@ -1,12 +1,24 @@
 ---
 import "../styles/global.css";
 import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
 ---
 <html lang="en">
 	<Head>
-		<title>Astro</title>
+		<title>{title}</title>
+		<script is:inline>
+		// if (typeof Storage !== "undefined") {
+		// 	let isDarkMode = localStorage.getItem("dark_mode") && localStorage.getItem("dark_mode") == "true";
+		// 	if (isDarkMode) {
+		// 		document.documentElement.classList.add("dark")
+		// 	}
+		// }
+		</script>
 	</Head>
-	<body class="font-mono">
+	<body class="bg-noise font-mono grid place-items-center grid-rows-[1fr_auto]">
 		<slot />
+		<Footer />
 	</body>
 </html>

@@ -1,15 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
 ---
-<Layout>
-	<header>
-		<h2>henlo</h2>
-		<p>it's NECOdes, im a dev</p>
-	</header>
-	<ul class="flex space-x-3 divide-x-1 divide-zinc-300">
-		<li class="pr-3"><a href="https://sakura_matou.t.me">telegram</a></li>
-		<li class="pr-3"><a href="https://github.com/NECOtype">github</a></li>
-		<li class="pr-3"><a href="https://gitlab.com/NECOdes">gitlab</a></li>
-		<li><a href="https://gitlab.com/NECOdes.gpg">pgp</a></li>
-	</ul>
+<Layout title="NECOdes">
+	<main class="flex divide-x *:px-2 -mx-2 divide-dashed divide-foreground/20">
+		<header class="flex items-center">
+			<div class="flex md:flex-col">
+				<span class="text-5xl font-bold">NECO</span>
+				<span class="md:mt-[-1cap] md:ml-[2ch] md:self-end">des</span>
+			</div>
+		</header>
+		<ul class="grid space-x-3">
+			<li class="pr-3"><a href="https://sakura_matou.t.me">telegram</a></li>
+			<li class="pr-3"><a href="https://github.com/NECOtype">github</a></li>
+			<li class="pr-3"><a href="https://gitlab.com/NECOdes">gitlab</a></li>
+			<li><a href="https://gitlab.com/NECOdes.gpg">pgp</a></li>
+		</ul>
+	</main>
 </Layout>
