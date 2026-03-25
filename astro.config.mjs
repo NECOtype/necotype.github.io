@@ -29,5 +29,6 @@ export default defineConfig({
 			fallbacks: ["serif"],
 		},
 	],
+	site: 'https://necotype.github.io',
 	integrations: [],
 });
