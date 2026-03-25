@@ -12,29 +12,33 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
+:root {
+	color-scheme: light dark;
+
+	--font-head: var(--font-instrument);
+	--font-body: var(--font-im-fell);
+
+	--background: light-dark(#faf4ed, #181616);
+	--foreground: light-dark(#575279, #c5c9c5);
+
+	--black: light-dark(#faf4ed, #0d0c0c);
+	--red: light-dark(#b4637a, #c4746e);
+	--green: light-dark(#56949f, #8a9a7b);
+	--yellow: light-dark(#ea9d34, #c4b28a);
+	--blue: light-dark(#286983, #8ba4b0);
+	--magenta: light-dark(#907aa9, #a292a3);
+	--cyan: light-dark(#56949f, #8ea4a2);
+	--lightwhite: light-dark(#f4ede8, #c5c9c5);
+	--hlBackground: light-dark(#286983, #2d4f67);
+	--hlForeground: light-dark(#faf4ed, #c8c093);
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
-	--background: #181616;
-	--foreground: #c5c9c5;
-	--black: #0d0c0c;
-	--red: #c4746e;
-	--green: #8a9a7b;
-	--yellow: #c4b28a;
-	--blue: #8ba4b0;
-	--magenta: #a292a3;
-	--cyan: #8ea4a2;
-	--lightwhite: #c5c9c5;
-	--hlBackground: #2d4f67;
-	--hlForeground: #c8c093;
-}
-
-:root {
-	--font-head: var(--font-instrument);
-	--font-body: var(--font-im-fell);
 }
 
 body,
