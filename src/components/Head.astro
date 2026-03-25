@@ -1,9 +1,12 @@
 ---
+import { Font } from "astro:assets";
 ---
 <head>
 	<meta charset="utf-8" />
 	<link rel="icon" type="image/gif" href="/chaos-walk.gif" />
 	<meta name="viewport" content="width=device-width" />
 	<meta name="generator" content={Astro.generator} />
+	<Font cssVariable="--font-im-fell" preload />
+	<Font cssVariable="--font-instrument" preload />
 	<slot />
 </head>

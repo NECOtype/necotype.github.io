@@ -15,20 +15,6 @@ export default defineConfig({
 			name: "IM Fell English",
 			cssVariable: "--font-im-fell",
 			fallbacks: ["serif"],
-		},
-		{
-			provider: fontProviders.fontsource(),
-			name: "IM Fell Great Primer",
-			cssVariable: "--font-im-fell-great",
-			fallbacks: ["serif"],
-		},
-		{
-			provider: fontProviders.fontsource(),
-			name: "Yuji Syuku",
-			cssVariable: "--font-yuji-syuku",
-			fallbacks: ["serif"],
-		},
+		}
 	],
-	site: 'https://necotype.github.io',
-	integrations: [],
 });

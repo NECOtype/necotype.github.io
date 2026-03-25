@@ -3,12 +3,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="NECOdes">
 	<main>
-		<header>
-			<div>
-				<span class="neco">NECO</span>
-				<span>des</span>
-			</div>
-		</header>
+		<div class="logo">
+			<span class="neco">NECO</span>
+			<span>des</span>
+		</div>
 		<ul>
 			<li><a href="https://sakura_matou.t.me">telegram</a></li>
 			<li><a href="https://github.com/NECOtype">github</a></li>
@@ -19,27 +17,37 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-	main {
-		display: flex;
-		place-items: center;
+main {
+	display: flex;
+	place-items: center;
 
-		> * {
-			padding: 1rem;
-		}
-		header {
-			display: flex;
-			place-items: center;
-			font-family: var(--font-head);
-			border-right: 1px dashed #333333;
-
-			span {
-				font-size: 1rem;
-			}
-
-			span:is(.neco) {
-				font-size: 2.5rem;
-			}
-		}
-		ul { list-style-type: none; }
+	> * {
+		padding: 1rem;
 	}
+
+	div.logo {
+		display: flex;
+		border-right: 1px dashed #333333;
+		font-family: var(--font-head);
+
+		span {
+			font-size: 1rem;
+			line-height: 1cap;
+			align-self: flex-end;
+		}
+
+		span:is(.neco) {
+			font-size: 2.5rem;
+			line-height: 1cap;
+		}
+	}
+
+	ul { list-style-type: none; }
+
+	a {
+		text-decoration: underline;
+		color: var(--blue);
+		&:hover { color: var(--yellow); }
+	}
+}
 </style>
