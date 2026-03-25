@@ -1,24 +1,25 @@
 ---
-import "../styles/global.css";
+import { Font } from "astro:assets";
 import Head from "../components/Head.astro";
-import Footer from "../components/Footer.astro";
+import "../global.css";
 
 const { title } = Astro.props;
 ---
 <html lang="en">
 	<Head>
 		<title>{title}</title>
-		<script is:inline>
-		// if (typeof Storage !== "undefined") {
-		// 	let isDarkMode = localStorage.getItem("dark_mode") && localStorage.getItem("dark_mode") == "true";
-		// 	if (isDarkMode) {
-		// 		document.documentElement.classList.add("dark")
-		// 	}
-		// }
-		</script>
+		<Font cssVariable="--font-im-fell" preload />
+		<Font cssVariable="--font-instrument" preload />
+		<Font cssVariable="--font-im-fell-great" preload />
 	</Head>
-	<body class="bg-noise font-mono grid place-items-center grid-rows-[1fr_auto]">
+	<body>
 		<slot />
-		<Footer />
 	</body>
 </html>
+
+<style>
+	body {
+		display: grid;
+		place-items: center;
+	}
+</style>

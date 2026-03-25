@@ -1,19 +1,43 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="NECOdes">
-	<main class="flex divide-x *:px-2 -mx-2 divide-dashed divide-foreground/20 z-2">
-		<header class="flex items-center">
-			<div class="flex md:flex-col">
-				<span class="text-5xl font-bold">NECO</span>
-				<span class="md:mt-[-1cap] md:ml-[2ch] md:self-end">des</span>
+	<main>
+		<header>
+			<div>
+				<span class="neco">NECO</span>
+				<span>des</span>
 			</div>
 		</header>
-		<ul class="grid space-x-3">
-			<li class="pr-3"><a href="https://sakura_matou.t.me">telegram</a></li>
-			<li class="pr-3"><a href="https://github.com/NECOtype">github</a></li>
-			<li class="pr-3"><a href="https://gitlab.com/NECOdes">gitlab</a></li>
-			<li><a href="https://gitlab.com/NECOdes.gpg">pgp</a></li>
+		<ul>
+			<li><a href="https://sakura_matou.t.me">telegram</a></li>
+			<li><a href="https://github.com/NECOtype">github</a></li>
+			<li><a href="https://gitlab.com/NECOdes">gitlab</a></li>
+			<li><a href="https://github.com/NECOtype.gpg">pgp</a></li>
 		</ul>
 	</main>
 </Layout>
+
+<style>
+	main {
+		> * {
+			padding: 1rem;
+		}
+		display: flex;
+		header {
+			display: flex;
+			place-items: center;
+			font-family: var(--font-head);
+			border-right: 1px dashed #333333;
+
+			span {
+				font-size: 1rem;
+			}
+
+			span:is(.neco) {
+				font-size: 2.5rem;
+			}
+		}
+		ul { list-style-type: none; }
+	}
+</style>
