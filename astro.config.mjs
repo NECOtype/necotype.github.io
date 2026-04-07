@@ -15,6 +15,6 @@ export default defineConfig({
 			name: "IM Fell English",
 			cssVariable: "--font-im-fell",
 			fallbacks: ["serif"],
-		}
+		},
 	],
 });
