@@ -5,9 +5,18 @@ import { defineConfig, fontProviders } from "astro/config";
 export default defineConfig({
 	fonts: [
 		{
-			provider: fontProviders.fontsource(),
-			name: "Instrument Serif",
-			cssVariable: "--font-instrument",
+			provider: fontProviders.local(),
+			name: "ZT Formom",
+			cssVariable: "--font-zt-formom",
+			options: {
+				variants: [
+					{
+						weight: 400,
+						style: "normal",
+						src: ["./src/assets/fonts/ZT Formom.woff2"]
+					}
+				]
+			},
 			fallbacks: ["serif"],
 		},
 		{
